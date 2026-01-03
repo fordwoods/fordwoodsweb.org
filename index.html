@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FordWoods Web Development</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    </svg>
+                    <span class="font-bold text-xl text-gray-900">FordWoods</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#mission" class="text-gray-700 hover:text-blue-600 transition">Mission</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 transition">Services</a>
+                    <a href="#approach" class="text-gray-700 hover:text-blue-600 transition">Our Approach</a>
+                    <a href="#impact" class="text-gray-700 hover:text-blue-600 transition">Impact</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button onclick="toggleMobileMenu()" class="md:hidden p-2">
+                    <svg id="menuIcon" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#mission" onclick="toggleMobileMenu()" class="block py-2 text-gray-700">Mission</a>
+                <a href="#services" onclick="toggleMobileMenu()" class="block py-2 text-gray-700">Services</a>
+                <a href="#approach" onclick="toggleMobileMenu()" class="block py-2 text-gray-700">Our Approach</a>
+                <a href="#impact" onclick="toggleMobileMenu()" class="block py-2 text-gray-700">Impact</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-gray-700">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto">
+                <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+                    Access Should Never Be a Barrier
+                </h1>
+                <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+                    FordWoods Web Development exists so that no one is left behind simply because 
+                    something felt too complicated to finish.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        Get Your Website
+                    </a>
+                    <a href="#mission" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold border-2 border-blue-600 hover:bg-blue-50 transition">
+                        Learn Our Story
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission" class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Our Mission</h2>
+            <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+                <p class="mb-4">
+                    FordWoods Web Development grew out of a lifelong desire to give back to foster care. 
+                    For more than 30 years, that mission stayed present—even when the right form for it 
+                    did not yet exist. Over time, it became clear that the greatest barrier was not 
+                    willingness or care, but access: access to learning, clarity, and tools that people 
+                    could understand and keep.
+                </p>
+                <p class="mb-4">
+                    FordWoods was created to meet that need. By building websites in real time and openly 
+                    sharing what is learned along the way, this nonprofit supports stability, ownership, 
+                    and continuity—values shaped by lived experience.
+                </p>
+                <p class="font-semibold text-blue-900">
+                    FordWoods exists so that no one is left behind simply because something felt too 
+                    complicated to finish.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">What We Offer</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <svg class="h-12 w-12 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                    </svg>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Website Development</h3>
+                    <p class="text-gray-700">
+                        Professional, accessible websites built with care. We create sites that are easy 
+                        to maintain and truly yours to keep.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <svg class="h-12 w-12 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Open Learning</h3>
+                    <p class="text-gray-700">
+                        We build in real time and share what we learn. Every project becomes a learning 
+                        opportunity for those who want to understand the process.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <svg class="h-12 w-12 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Community Support</h3>
+                    <p class="text-gray-700">
+                        Serving individuals and organizations connected to foster care with tools that 
+                        promote stability and growth.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section id="approach" class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Our Approach</h2>
+            <div class="space-y-6">
+                <div class="border-l-4 border-blue-600 pl-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Transparency</h3>
+                    <p class="text-gray-700">
+                        We work openly, sharing our process and decisions. You're not just getting a 
+                        finished product—you're learning how it was built and why.
+                    </p>
+                </div>
+                <div class="border-l-4 border-blue-600 pl-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Ownership</h3>
+                    <p class="text-gray-700">
+                        What we build is truly yours. We provide clear documentation and transfer full 
+                        control so you can maintain and grow your web presence independently.
+                    </p>
+                </div>
+                <div class="border-l-4 border-blue-600 pl-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Accessibility</h3>
+                    <p class="text-gray-700">
+                        We remove barriers. Our websites are designed to be understood, used, and 
+                        maintained by people regardless of their technical background.
+                    </p>
+                </div>
+                <div class="border-l-4 border-blue-600 pl-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Continuity</h3>
+                    <p class="text-gray-700">
+                        We build for the long term. Our goal is to create digital tools that grow with 
+                        you and remain useful for years to come.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="py-16 px-4 sm:px-6 lg:px-8 bg-blue-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Who We Serve</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Individuals</h3>
+                    <p class="text-gray-700">
+                        People with lived experience in foster care who need a professional web presence 
+                        for their work, advocacy, or personal projects. We help turn ideas into reality 
+                        without the usual barriers.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Organizations</h3>
+                    <p class="text-gray-700">
+                        Nonprofits, advocacy groups, and community organizations serving the foster care 
+                        community. We provide the digital infrastructure needed to expand reach and impact.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Get Started</h2>
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <form onsubmit="handleSubmit(event)" class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-900 mb-2">
+                            Your Name
+                        </label>
+                        <input
+                            type="text"
+                            required
+                            name="name"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                        />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-900 mb-2">
+                            Email Address
+                        </label>
+                        <input
+                            type="email"
+                            required
+                            name="email"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                        />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-900 mb-2">
+                            I'm interested in
+                        </label>
+                        <select
+                            name="type"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                        >
+                            <option value="website">Getting a website built</option>
+                            <option value="learning">Learning about the process</option>
+                            <option value="support">Supporting the mission</option>
+                            <option value="other">Something else</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-900 mb-2">
+                            Tell us about your project or question
+                        </label>
+                        <textarea
+                            required
+                            rows="4"
+                            name="message"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                        ></textarea>
+                    </div>
+                    <button
+                        type="submit"
+                        class="w-full bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition flex items-center justify-center space-x-2"
+                    >
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        <span>Send Message</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <svg class="h-6 w-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                        <span class="font-bold text-xl">FordWoods</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Web Development for those connected to foster care. Access should never be a barrier.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="#mission" class="block text-gray-400 hover:text-white transition">Mission</a>
+                        <a href="#services" class="block text-gray-400 hover:text-white transition">Services</a>
+                        <a href="#contact" class="block text-gray-400 hover:text-white transition">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Our Values</h4>
+                    <ul class="text-gray-400 space-y-1">
+                        <li>Stability</li>
+                        <li>Ownership</li>
+                        <li>Continuity</li>
+                        <li>Access</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>© 2026 FordWoods Web Development. A nonprofit dedicated to removing barriers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for reaching out. We will get back to you soon!');
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
